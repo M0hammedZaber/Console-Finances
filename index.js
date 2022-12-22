@@ -98,3 +98,19 @@ for (var i = 0; i < finances.length; i++) {
 }
 // I need to add all the months to get the total, I need to make the loop run from the start which is 0 and all the way to the end to get the total, so need to use finances.length for my list and console.log it to get the total amount.
 console.log("Total: $" + sum);
+
+var AC = [] //name the array.
+
+for (var i = 0; i < finances.length - 1; i ++) {
+   AC.push(finances[i + 1][1] - finances[i][1]);
+}
+// to get the average you must start at month -1 so need to add a push command to the array.
+
+var alteration = 0;
+for (var i = 0; i < AC.length; i++) { 
+   alteration += AC[i];
+ } 
+
+var averageChange = alteration / AC.length; //formula to show steps for division to calulate the average.
+
+console.log("Average Change: $" + averageChange.toFixed(2)); // getting the average over the entire period rather than a few months.
