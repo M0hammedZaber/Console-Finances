@@ -99,7 +99,7 @@ for (var i = 0; i < finances.length; i++) {
 // I need to add all the months to get the total, I need to make the loop run from the start which is 0 and all the way to the end to get the total, so need to use finances.length for my list and console.log it to get the total amount.
 console.log("Total: $" + sum);
 
-var AC = [] //name the array.
+var AC = [] //name the variable.
 
 for (var i = 0; i < finances.length - 1; i ++) {
    AC.push(finances[i + 1][1] - finances[i][1]);
@@ -114,3 +114,33 @@ for (var i = 0; i < AC.length; i++) {
 var averageChange = alteration / AC.length; //formula to show steps for division to calulate the average.
 
 console.log("Average Change: $" + averageChange.toFixed(2)); // getting the average over the entire period rather than a few months.
+
+var Upamount = 0;
+var BigProfit = 1; //confirm my variables for increased profit.
+
+for (var i = 0; i < AC.length; i++) {
+    if(BigProfit < AC[i]){ // either less than my Average Change, 
+        BigProfit = AC[i];  //or equal to my Average Change, Also put a loop in to go through the list to find the increased profit.
+        Upamount = i;
+    }   ;
+}
+
+var ProfitMonth = finances[Upamount + 1][0];
+
+console.log("Greatest Increase in Profits: " + ProfitMonth + " ($" + BigProfit + ")");
+
+var Downamount = 0;
+var MinimumProfit = 0; //confirm my variables for my decreased profit. 
+
+for( var i = 0; i < AC.length ; i++) {
+    if(MinimumProfit > AC[i]){ // either greater than my Average Change
+        MinimumProfit = AC[i]; // or equal to my Average change, same loop as before as its going through the same list but this time looking for the loss amount rather than profit amount.
+       Downamount = i;}
+}
+
+var LossesMonth = finances[Downamount + 1][0];
+
+console.log("Greatest Decrease in Profits: " + LossesMonth + " ($" + MinimumProfit + ")");
+
+
+
