@@ -127,7 +127,7 @@ for (var i = 0; i < AC.length; i++) {
 
 var ProfitMonth = finances[Upamount + 1][0];
 
-console.log("Greatest Increase in Profits: " + ProfitMonth + " ($" + BigProfit + ")");
+console.log("Greatest Increase in Profits: " + ProfitMonth + " (" +"$" + BigProfit + ")"); //using a concatenation operator here as combining the string with a + element
 
 var Downamount = 0;
 var MinimumProfit = 0; //confirm my variables for my decreased profit. 
@@ -140,7 +140,4 @@ for( var i = 0; i < AC.length ; i++) {
 
 var LossesMonth = finances[Downamount + 1][0];
 
-console.log("Greatest Decrease in Profits: " + LossesMonth + " ($" + MinimumProfit + ")");
-
-
-
+console.log("Greatest Decrease in Profits: " + LossesMonth + " (" + "$" + MinimumProfit + ")");
