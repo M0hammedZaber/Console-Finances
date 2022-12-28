@@ -94,7 +94,7 @@ console.log("Total Months: " + finances.length) // For the total, firstly i need
 var sum = 0; // before i start a loop i need to confirm what the variable is going to be, in this case the number is 0.
 
 for (var i = 0; i < finances.length; i++) {
-    sum += (finances[i])[1];
+   sum += (finances[i])[1];
 }
 // I need to add all the months to get the total, I need to make the loop run from the start which is 0 and all the way to the end to get the total, so need to use finances.length for my list and console.log it to get the total amount.
 console.log("Total: $" + sum);
@@ -127,7 +127,7 @@ for (var i = 0; i < AC.length; i++) {
 
 var ProfitMonth = finances[Upamount + 1][0];
 
-console.log("Greatest Increase in Profits: " + ProfitMonth + " (" +"$" + BigProfit + ")"); //using a concatenation operator here as combining the string with a + element
+console.log("Greatest Increase in Profits: " + ProfitMonth + " (" + "$" + BigProfit + ")"); //using a concatenation operator here as combining the string with a + element
 
 var Downamount = 0;
 var MinimumProfit = 0; //confirm my variables for my decreased profit. 
